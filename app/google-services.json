@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611367540261",
+    "project_id": "labtareas-fd58d",
+    "storage_bucket": "labtareas-fd58d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611367540261:android:791473451984a03e7291cc",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauthapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611367540261-ari6ashquga70kksknvfe31bpagea42e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXnFD8lR72b9_htwhmj2sUHhFAkk6fRK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611367540261-ari6ashquga70kksknvfe31bpagea42e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

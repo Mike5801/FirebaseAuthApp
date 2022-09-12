@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".framework.views.VerifyPhoneActivity"
+    style="@style/backgroundBase"
+    >
+
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/logo2"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.55"
+        android:text="MyTest"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:textFontWeight="600"
+        android:textColor="@color/light_sea_green"
+        />
+    <TextView
+        android:id="@+id/logo2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        android:text="Application"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:textFontWeight="600"
+        android:textColor="@color/dark_jungle_green"
+        />
+
+    <ImageView
+        android:id="@+id/logoImg"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/test_logo"
+        />
+
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/logoImg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Teléfono"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/dark_jungle_green"
+        android:textSize="16sp"
+        app:layout_constraintVertical_bias="0.2"
+        />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:inputType="number"
+        android:textColor="@color/dark_jungle_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneLabel"
+        app:layout_constraintVertical_bias="0"
+        android:hint="Escribe tu número telefónico"
+        android:textColorHint="#C2C2C2"
+
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verifyBtn"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        android:text="Verificar Teléfono"
+        android:backgroundTint="@color/light_sea_green"
+        android:textColor="@color/white"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
