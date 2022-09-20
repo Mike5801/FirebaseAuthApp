@@ -2,7 +2,9 @@ package com.example.firebaseauthapp.domain.models
 
 import android.util.Log
 import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
@@ -41,5 +43,18 @@ class FirestoreService {
                 }
             }.await()
         return exists
+    }
+
+    suspend fun getTicketTypeLabel() {
+
+    }
+
+    suspend fun getTypeTicketInfo(idEvent: String) : QuerySnapshot {
+        val ticketInfo = db.collection("evento-tipoBoleto")
+            .whereEqualTo("idEvento", idEvent)
+            .get()
+            .await()
+
+        return ticketInfo
     }
 }

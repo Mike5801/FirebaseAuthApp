@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/drawable/btn_color.xml" value="0.2575" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/drawable/logo_frame.xml" value="0.2575" />
+        <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_component_testing.xml" value="0.29528985507246375" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_main_page.xml" value="0.25" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_register_user.xml" value="0.25" />
+        <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_testing_gallery.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_verify_otp.xml" value="0.2864583333333333" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_verify_otpactivity.xml" value="0.25" />
         <entry key="..\:/Users/Migue/AndroidStudioProjects/FirebaseAuthApp/app/src/main/res/layout/activity_verify_phone.xml" value="0.2368659420289855" />

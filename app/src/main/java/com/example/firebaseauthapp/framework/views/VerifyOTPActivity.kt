@@ -35,7 +35,6 @@ class VerifyOTPActivity : AppCompatActivity() {
         binding = ActivityVerifyOtpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var userExists: Boolean
 
         phone = intent.getStringExtra("phoneNumber").toString()
         otp = intent.getStringExtra("otp").toString()

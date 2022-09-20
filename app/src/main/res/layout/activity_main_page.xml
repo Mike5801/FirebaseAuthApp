@@ -129,6 +129,7 @@
         android:textFontWeight="500"
         />
 
+
     <TextView
         app:layout_constraintVertical_bias="0"
         android:id="@+id/title2_2"
@@ -144,7 +145,7 @@
         android:fontFamily="sans-serif"
         android:textFontWeight="500"
         />
-    
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/logoutBtn"
         android:layout_width="0dp"
@@ -166,5 +167,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.92"
         />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

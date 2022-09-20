@@ -12,14 +12,14 @@ class MainPageViewModel : ViewModel() {
 
     val user = MutableLiveData<UserModel>()
 
-    fun getUser(uid: String) {
+    fun getUser(uid: String, result: (UserModel) -> Unit) {
         viewModelScope.launch {
             val userInfo = getUserInformationRequirement(uid).data
             val name = userInfo?.get("name")
             val lastName = userInfo?.get("lastName")
             val email = userInfo?.get("email")
             val userData = UserModel(name.toString(), lastName.toString(), email.toString())
-            user.postValue(userData)
+            result(userData)
         }
     }
 }
