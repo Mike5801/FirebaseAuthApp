@@ -17,6 +17,5 @@ class testingGallery : AppCompatActivity() {
             intent.putExtra("idEvento", "idDelEvento1")
             startActivity(intent)
         }
-
     }
 }

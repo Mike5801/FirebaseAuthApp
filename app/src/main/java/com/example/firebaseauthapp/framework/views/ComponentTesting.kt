@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.RadioButton
+import androidx.activity.viewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.example.firebaseauthapp.databinding.ActivityComponentTestingBinding
+import com.example.firebaseauthapp.framework.viewModel.ComponentTestingViewModel
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.QuerySnapshot
@@ -22,11 +24,24 @@ import kotlinx.coroutines.tasks.await
 class ComponentTesting : AppCompatActivity() {
     private lateinit var binding: ActivityComponentTestingBinding
     private lateinit var gender: String
-    private val db = Firebase.firestore
+    private val componentTestingViewModel : ComponentTestingViewModel by viewModels()
     private lateinit var specificUser: DocumentSnapshot
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        componentTestingViewModel.getDropdownNames("HPhhXx5Pjrv6VqVAPS5H")
+
+        componentTestingViewModel.dropDownValues.observe(this, Observer {
+            val dropdownElements : MutableList<String> = mutableListOf()
+
+            for (document in it) {
+                dropdownElements.add("${document.first}: $${document.second}")
+            }
+
+            Log.d("Dropdown View", dropdownElements.toString())
+
+        })
 
         binding = ActivityComponentTestingBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -55,11 +70,6 @@ class ComponentTesting : AppCompatActivity() {
 
         val userData = MutableLiveData<DocumentSnapshot>()
 
-        lifecycleScope.launch {
-            val data =  getData("Justino")
-            userData.postValue(data)
-        }
-
         userData.observe(this, Observer {
             specificUser = it
             Log.d("Got result", specificUser.data.toString())
@@ -69,23 +79,16 @@ class ComponentTesting : AppCompatActivity() {
 
         val eventId: String = intent.getStringExtra("idEvento").toString()
 
-
-
+        binding.btnTipo1.setOnClickListener {
+            componentTestingViewModel.getCurrentTickets("HPhhXx5Pjrv6VqVAPS5H", "DNhDWrVH7jWENly1P3MS")
+            componentTestingViewModel.boletosDisponibles.observe(this, Observer {
+                Log.d("btn1 Log", it.toString())
+                if (it[0].second >= it[0].third) {
+                    binding.btnTipo1.isEnabled = false
+                }
+            })
+        }
     }
 
-    private suspend fun getData(name: String) : DocumentSnapshot {
-        val userData = db.collection("users")
-            .whereEqualTo("name", "Justino")
-            .get()
-            .addOnSuccessListener {
-                Log.d("Firestore Testing", "Success")
-            }
-            .await()
 
-        val userAn = db.collection("animes")
-            .document(userData.documents[0].id)
-            .get()
-            .await()
-        return userAn
-    }
 }

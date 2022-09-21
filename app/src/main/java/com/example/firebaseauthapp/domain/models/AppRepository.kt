@@ -23,4 +23,12 @@ class AppRepository {
     suspend fun validateUserExistence(uid: String) : Boolean {
         return fireStoreAPI.userExist(uid)
     }
+
+    suspend fun getDropdownNames(idEvent: String) : List<Triple<String, Int, String>> {
+        return fireStoreAPI.getDropdownNames(idEvent)
+    }
+
+    suspend fun getCurrentTicketsFun(idEvent: String, idFuncion: String) : List<Triple<String, Int, Int>> {
+        return fireStoreAPI.currentTicketsFun(idEvent, idFuncion)
+    }
 }

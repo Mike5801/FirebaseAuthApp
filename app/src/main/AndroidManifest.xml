@@ -17,6 +17,9 @@
         android:theme="@style/Theme.FirebaseAuthApp"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterSale"
+            android:exported="false" />
+        <activity
             android:name=".framework.views.testingGallery"
             android:exported="false" />
         <activity
@@ -30,7 +33,7 @@
         </activity>
         <activity
             android:name=".framework.views.MainPageActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".framework.views.VerifyOTPActivity"
             android:exported="false" />
@@ -39,7 +42,7 @@
             android:exported="false" />
         <activity
             android:name=".framework.views.VerifyPhoneActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
